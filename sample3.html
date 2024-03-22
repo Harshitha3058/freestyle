@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My School</title>
+    <style>
+      /* Styles for header, nav, main, and footer */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My School</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Academics</a></li>
+        <li><a href="#">Admissions</a></li>
+        <li><a href="#">Campus Life</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <?php
+        // Define a multidimensional array of academic programs
+        $programs = array(
+          array("name" => "Preschool", "description" => "Our preschool program is designed for children ages 3-5."),
+          array("name" => "Elementary School", "description" => "Our elementary school program serves students in grades K-5."),
+          array("name" => "Middle School", "description" => "Our middle school program serves students in grades 6-8."),
+          array("name" => "High School", "description" => "Our high school program serves students in grades 9-12.")
+        );
+
+        // Output a section for each academic program
+        foreach ($programs as $program) {
+          echo "<section>";
+          echo "<h2>" . $program["name"] . "</h2>";
+          echo "<p>" . $program["description"] . "</p>";
+          echo "</section>";
+        }
+      ?>
+    </main>
+
+    <footer>
+      <p>&copy; My School <?php echo date("Y"); ?></p>
+    </footer>
+  </body>
+</html>
